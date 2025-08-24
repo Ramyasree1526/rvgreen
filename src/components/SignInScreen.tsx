@@ -4,7 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { Recycle, Eye, EyeOff, Chrome } from "lucide-react";
+import { Eye, EyeOff, Chrome } from "lucide-react";
+import reviewGreenLogo from "@/assets/review-green-logo.png";
 
 interface SignInScreenProps {
   onSignIn: (user: { name: string; email: string; avatar?: string }) => void;
@@ -59,8 +60,8 @@ export const SignInScreen = ({ onSignIn }: SignInScreenProps) => {
           {/* Logo and Branding */}
           <div className="text-center space-y-4">
             <div className="flex justify-center">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30">
-                <Recycle className="w-12 h-12 text-white" />
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30 p-3">
+                <img src={reviewGreenLogo} alt="Review Green Logo" className="w-full h-full object-contain" />
               </div>
             </div>
             <div className="space-y-2">

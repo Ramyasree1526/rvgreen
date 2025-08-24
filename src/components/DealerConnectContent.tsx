@@ -11,12 +11,12 @@ import {
   Clock,
   Star,
   Truck,
-  Recycle,
   Filter,
   MessageCircle,
   Navigation,
   Award
 } from "lucide-react";
+import reviewGreenLogo from "@/assets/review-green-logo.png";
 
 export const DealerConnectContent = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -318,7 +318,7 @@ export const DealerConnectContent = () => {
       {/* Add Dealer CTA */}
       <Card className="border-dashed border-2 border-primary/30 bg-primary/5">
         <CardContent className="p-8 text-center">
-          <Recycle className="w-16 h-16 text-primary mx-auto mb-4" />
+          <img src={reviewGreenLogo} alt="Review Green" className="w-16 h-16 mx-auto mb-4 object-contain" />
           <h3 className="text-2xl font-bold text-primary mb-2">Are You a Waste Dealer?</h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Join our network of trusted dealers and connect with eco-conscious customers in your area. Grow your business while supporting sustainability.

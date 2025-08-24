@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
-import { Heart, Recycle, Users } from "lucide-react"
+import { Heart, Users } from "lucide-react"
 import heroImage from "@/assets/hero-upcycling.jpg"
+import reviewGreenLogo from "@/assets/review-green-logo.png"
 
 const Hero = () => {
   return (
@@ -25,7 +26,7 @@ const Hero = () => {
               <Heart className="w-8 h-8 text-accent" />
             </div>
             <div className="animate-bounce delay-150">
-              <Recycle className="w-8 h-8 text-primary" />
+              <img src={reviewGreenLogo} alt="Review Green" className="w-8 h-8 object-contain" />
             </div>
             <div className="animate-bounce delay-300">
               <Users className="w-8 h-8 text-accent" />
