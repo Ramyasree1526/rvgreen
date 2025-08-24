@@ -18,6 +18,7 @@ import {
   Award,
   Heart
 } from "lucide-react";
+import reviewGreenLogo from "@/assets/review-green-logo.png";
 import {
   SidebarProvider,
   SidebarTrigger,
@@ -73,8 +74,8 @@ const AppSidebar = ({ user, onSignOut, activeTab, setActiveTab }: {
         {/* Logo Section */}
         <div className="p-4 border-b border-sidebar-border">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center flex-shrink-0">
-              <Recycle className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
+              <img src={reviewGreenLogo} alt="Review Green Logo" className="w-full h-full object-contain" />
             </div>
             {state !== "collapsed" && (
               <div>
