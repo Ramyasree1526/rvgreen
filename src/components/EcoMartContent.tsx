@@ -16,18 +16,16 @@ import {
   Truck,
   Shield
 } from "lucide-react";
-import spiceJars from "@/assets/spice-jars.png";
-import winBottleLights from "@/assets/wine-bottle-lights.png";
 
 export const EcoMartContent = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("all");
 
   const filters = [
-    { id: "all", name: "All Items", icon: <Shield className="w-4 h-4" /> },
-    { id: "selling", name: "For Sale", icon: <DollarSign className="w-4 h-4" /> },
-    { id: "free", name: "Free Items", icon: <Gift className="w-4 h-4" /> },
-    { id: "local", name: "Near Me", icon: <MapPin className="w-4 h-4" /> }
+    { id: "all", name: "All Items", icon: "🛍️" },
+    { id: "selling", name: "For Sale", icon: "💰" },
+    { id: "free", name: "Free Items", icon: "🎁" },
+    { id: "local", name: "Near Me", icon: "📍" }
   ];
 
   const items = [
@@ -101,7 +99,7 @@ export const EcoMartContent = () => {
       distance: "15 miles",
       likes: 89,
       rating: 4.5,
-      image: spiceJars,
+      image: "🫙🌶️",
       description: "Set of 12 upcycled glass jars with custom labels. Perfect for organizing spices and herbs.",
       tags: ["Kitchen", "Organization", "Glass"],
       featured: false
@@ -141,10 +139,7 @@ export const EcoMartContent = () => {
     <div className="space-y-8">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div className="flex items-center justify-center gap-3">
-          <h1 className="text-4xl font-bold text-foreground">EcoMart</h1>
-          <Shield className="w-10 h-10 text-primary" />
-        </div>
+        <h1 className="text-4xl font-bold text-foreground">EcoMart 🛍️</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Buy, sell, or gift eco-friendly creations. Every purchase supports sustainable living and creative makers.
         </p>
@@ -169,7 +164,7 @@ export const EcoMartContent = () => {
               onClick={() => setSelectedFilter(filter.id)}
               className="flex items-center space-x-2"
             >
-              {filter.icon}
+              <span>{filter.icon}</span>
               <span className="hidden sm:inline">{filter.name}</span>
             </Button>
           ))}
@@ -204,13 +199,7 @@ export const EcoMartContent = () => {
               <Card key={item.id} className="group hover:shadow-xl transition-all duration-300 border-2 border-primary/20">
                 <CardHeader className="text-center relative">
                   <Badge className="absolute top-4 right-4 bg-gradient-hero text-white">Featured</Badge>
-                  <div className="mb-4">
-                    {typeof item.image === 'string' ? (
-                      <div className="text-6xl">{item.image}</div>
-                    ) : (
-                      <img src={item.image} alt={item.title} className="w-32 h-32 mx-auto object-cover rounded-lg" />
-                    )}
-                  </div>
+                  <div className="text-6xl mb-4">{item.image}</div>
                   <CardTitle className="text-xl">{item.title}</CardTitle>
                   <CardDescription className="space-y-2">
                     <div className="flex items-center justify-center space-x-4">
@@ -299,13 +288,7 @@ export const EcoMartContent = () => {
           {filteredItems.map(item => (
             <Card key={item.id} className="group hover:shadow-xl transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="mb-4">
-                  {typeof item.image === 'string' ? (
-                    <div className="text-6xl">{item.image}</div>
-                  ) : (
-                    <img src={item.image} alt={item.title} className="w-32 h-32 mx-auto object-cover rounded-lg" />
-                  )}
-                </div>
+                <div className="text-6xl mb-4">{item.image}</div>
                 <CardTitle className="text-lg">{item.title}</CardTitle>
                 <CardDescription className="space-y-2">
                   <div className="flex items-center justify-center space-x-4">

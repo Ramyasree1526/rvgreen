@@ -2,10 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Heart, Leaf, Users, Sparkles } from "lucide-react"
 import { useState } from "react"
-import plantSprout from "@/assets/plant-sprout.png"
-import greenHeart from "@/assets/green-heart.png"
-import starIcon from "@/assets/star-icon.png"
-import earthGlobe from "@/assets/earth-globe.png"
 
 const CallToAction = () => {
   const [email, setEmail] = useState("")
@@ -51,10 +47,9 @@ const CallToAction = () => {
 
           {/* Value proposition */}
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 mb-10 border border-white/20">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <img src={plantSprout} alt="Plant sprout" className="w-8 h-8 object-contain" />
-              <h3 className="text-2xl font-bold text-white">Join 50,000+ Earth Guardians Who Are:</h3>
-            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              🌱 Join 50,000+ Earth Guardians Who Are:
+            </h3>
             <div className="grid md:grid-cols-2 gap-4 text-white/90 text-lg">
               <div className="flex items-center space-x-3">
                 <Heart className="w-6 h-6 text-accent-foreground" />
@@ -94,9 +89,8 @@ const CallToAction = () => {
                 className="flex-1 h-12 text-lg"
                 required
               />
-              <Button type="submit" variant="hero" size="lg" className="h-12 px-8 flex items-center gap-2">
-                <img src={greenHeart} alt="Green heart" className="w-5 h-5 object-contain" />
-                Join Our Family
+              <Button type="submit" variant="hero" size="lg" className="h-12 px-8">
+                💚 Join Our Family
               </Button>
             </form>
             
@@ -108,24 +102,15 @@ const CallToAction = () => {
           {/* Social proof */}
           <div className="flex flex-wrap justify-center gap-8 text-white/80 text-sm">
             <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-3xl font-bold text-white mb-1">
-                <img src={starIcon} alt="Star" className="w-8 h-8 object-contain" />
-                4.9
-              </div>
+              <div className="text-3xl font-bold text-white">⭐ 4.9</div>
               <div>App Store Rating</div>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-3xl font-bold text-white mb-1">
-                <img src={greenHeart} alt="Green heart" className="w-8 h-8 object-contain" />
-                98%
-              </div>
+              <div className="text-3xl font-bold text-white">💚 98%</div>
               <div>Would Recommend</div>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-3xl font-bold text-white mb-1">
-                <img src={earthGlobe} alt="Earth globe" className="w-8 h-8 object-contain" />
-                Global
-              </div>
+              <div className="text-3xl font-bold text-white">🌍 Global</div>
               <div>Movement</div>
             </div>
           </div>

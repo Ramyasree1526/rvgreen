@@ -21,12 +21,12 @@ export const DIYHubContent = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
-    { id: "all", name: "All Projects", icon: <Star className="w-4 h-4" /> },
-    { id: "glass", name: "Glass", icon: <Bottle className="w-4 h-4" /> },
-    { id: "fabric", name: "Fabric", icon: <Heart className="w-4 h-4" /> },
-    { id: "metal", name: "Metal", icon: <Package className="w-4 h-4" /> },
-    { id: "cardboard", name: "Cardboard", icon: <Package className="w-4 h-4" /> },
-    { id: "plastic", name: "Plastic", icon: <Bottle className="w-4 h-4" /> }
+    { id: "all", name: "All Projects", icon: "🌟" },
+    { id: "glass", name: "Glass", icon: "🍷" },
+    { id: "fabric", name: "Fabric", icon: "👕" },
+    { id: "metal", name: "Metal", icon: "🥫" },
+    { id: "cardboard", name: "Cardboard", icon: "📦" },
+    { id: "plastic", name: "Plastic", icon: "🥤" }
   ];
 
   const projects = [
@@ -39,7 +39,7 @@ export const DIYHubContent = () => {
       rating: 4.8,
       likes: 234,
       author: "Sarah Green",
-      image: winBottleLights,
+      image: "🍷✨",
       description: "Transform wine bottles into magical garden lighting",
       materials: ["Wine bottles", "LED string lights", "Drill", "Glass cutter"],
       featured: true

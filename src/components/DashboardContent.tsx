@@ -18,7 +18,6 @@ import {
   Calendar,
   ArrowRight
 } from "lucide-react";
-import plantSprout from "@/assets/plant-sprout.png";
 
 interface User {
   name: string;
@@ -39,7 +38,7 @@ export const DashboardContent = ({ user }: DashboardContentProps) => {
         setIsCameraOpen(true);
         break;
       case "ai-ideas":
-        alert("AI Ideas feature coming soon! Get personalized upcycling suggestions based on your materials.");
+        alert("💡 AI Ideas feature coming soon! Get personalized upcycling suggestions based on your materials.");
         break;
       case "find-dealers":
         alert("🔍 Dealer Connect feature coming soon! Find local waste material dealers near you.");
@@ -118,9 +117,8 @@ export const DashboardContent = ({ user }: DashboardContentProps) => {
       {/* Welcome Section */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-foreground flex items-center gap-3">
-            Welcome back, {user.name}!
-            <img src={plantSprout} alt="Plant sprout" className="w-8 h-8 object-contain" />
+          <h1 className="text-3xl font-bold text-foreground">
+            Welcome back, {user.name}! 🌱
           </h1>
           <p className="text-muted-foreground mt-2">
             Ready to make today more sustainable? Here's what's happening in your eco journey.
