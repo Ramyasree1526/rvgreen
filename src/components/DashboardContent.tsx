@@ -98,7 +98,7 @@ export const DashboardContent = ({ user }: DashboardContentProps) => {
       title: "Get AI Ideas",
       description: "AI-powered upcycling suggestions",
       icon: Lightbulb,
-      color: "bg-gradient-nature",
+      color: "bg-primary",
       action: "Explore Ideas",
       actionType: "ai-ideas"
     },
@@ -106,7 +106,7 @@ export const DashboardContent = ({ user }: DashboardContentProps) => {
       title: "Find Materials",
       description: "Connect with local waste dealers",
       icon: Users,
-      color: "bg-gradient-soft",
+      color: "bg-accent",
       action: "Find Dealers",
       actionType: "find-dealers"
     }
