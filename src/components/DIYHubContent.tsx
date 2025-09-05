@@ -13,12 +13,8 @@ import {
   Users,
   Plus,
   Play,
-  Bookmark,
-  Wine,
-  Package2,
-  Shirt
+  Bookmark
 } from "lucide-react";
-import winBottleLights from "@/assets/wine-bottle-lights.png";
 
 export const DIYHubContent = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -26,11 +22,11 @@ export const DIYHubContent = () => {
 
   const categories = [
     { id: "all", name: "All Projects", icon: <Star className="w-4 h-4" /> },
-    { id: "glass", name: "Glass", icon: <Wine className="w-4 h-4" /> },
-    { id: "fabric", name: "Fabric", icon: <Shirt className="w-4 h-4" /> },
-    { id: "metal", name: "Metal", icon: <Package2 className="w-4 h-4" /> },
-    { id: "cardboard", name: "Cardboard", icon: <Package2 className="w-4 h-4" /> },
-    { id: "plastic", name: "Plastic", icon: <Search className="w-4 h-4" /> }
+    { id: "glass", name: "Glass", icon: <Bottle className="w-4 h-4" /> },
+    { id: "fabric", name: "Fabric", icon: <Heart className="w-4 h-4" /> },
+    { id: "metal", name: "Metal", icon: <Package className="w-4 h-4" /> },
+    { id: "cardboard", name: "Cardboard", icon: <Package className="w-4 h-4" /> },
+    { id: "plastic", name: "Plastic", icon: <Bottle className="w-4 h-4" /> }
   ];
 
   const projects = [
