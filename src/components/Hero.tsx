@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Heart, Users } from "lucide-react"
 import heroImage from "@/assets/hero-upcycling.jpg"
 import reviewGreenLogo from "@/assets/review-green-logo.png"
+import plantSprout from "@/assets/plant-sprout.png"
+import greenHeart from "@/assets/green-heart.png"
 
 const Hero = () => {
   return (
@@ -59,11 +61,13 @@ const Hero = () => {
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button variant="hero" size="xl" className="text-lg">
-              🌱 Join Our Eco-Family
+            <Button variant="hero" size="xl" className="text-lg flex items-center gap-2">
+              <img src={plantSprout} alt="Plant sprout" className="w-6 h-6 object-contain" />
+              Join Our Eco-Family
             </Button>
-            <Button variant="nature" size="xl" className="text-lg">
-              💚 Discover the Magic
+            <Button variant="nature" size="xl" className="text-lg flex items-center gap-2">
+              <img src={greenHeart} alt="Green heart" className="w-6 h-6 object-contain" />
+              Discover the Magic
             </Button>
           </div>
 

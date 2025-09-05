@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Camera as CameraIcon, Video, Upload, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { LiveCameraView } from './LiveCameraView';
+import plantSprout from '@/assets/plant-sprout.png';
 
 interface CameraUploadProps {
   isOpen: boolean;
@@ -99,7 +100,7 @@ export const CameraUpload = ({ isOpen, onClose }: CameraUploadProps) => {
       });
 
       setCapturedImage(image.webPath || '');
-      toast.success('Image selected successfully! 🖼️');
+      toast.success('Image selected successfully!');
     } catch (error) {
       console.error('Error selecting image:', error);
       toast.error('Unable to access photo gallery.');
@@ -115,7 +116,7 @@ export const CameraUpload = ({ isOpen, onClose }: CameraUploadProps) => {
 
   const handleShare = () => {
     if (capturedImage) {
-      toast.success('Your creation has been shared with the community! 🌱');
+      toast.success('Your creation has been shared with the community!');
       setCapturedImage(null);
       onClose();
     }
@@ -171,8 +172,9 @@ export const CameraUpload = ({ isOpen, onClose }: CameraUploadProps) => {
                 </Button>
               </div>
 
-              <p className="text-sm text-muted-foreground text-center">
-                Share your creative upcycling projects and inspire others! 🌱
+              <p className="text-sm text-muted-foreground text-center flex items-center gap-2 justify-center">
+                Share your creative upcycling projects and inspire others!
+                <img src={plantSprout} alt="Plant sprout" className="w-4 h-4 object-contain" />
               </p>
             </>
           ) : (

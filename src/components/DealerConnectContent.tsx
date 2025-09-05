@@ -17,6 +17,7 @@ import {
   Award
 } from "lucide-react";
 import reviewGreenLogo from "@/assets/review-green-logo.png";
+import starIcon from "@/assets/star-icon.png";
 
 export const DealerConnectContent = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -179,7 +180,9 @@ export const DealerConnectContent = () => {
         </Card>
         <Card className="text-center">
           <CardContent className="p-4">
-            <div className="text-2xl mb-2">⭐</div>
+            <div className="flex justify-center mb-2">
+              <img src={starIcon} alt="Star rating" className="w-8 h-8 object-contain" />
+            </div>
             <div className="text-2xl font-bold text-primary">4.7</div>
             <div className="text-sm text-muted-foreground">Average Rating</div>
           </CardContent>

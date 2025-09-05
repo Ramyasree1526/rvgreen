@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Quote, Heart, Star } from "lucide-react"
 import communityImage from "@/assets/community-sharing.jpg"
+import greenHeart from "@/assets/green-heart.png"
 
 const Community = () => {
   const testimonials = [
@@ -104,11 +105,13 @@ const Community = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl">
-                💚 Join Our Community
+              <Button variant="hero" size="xl" className="flex items-center gap-2">
+                <img src={greenHeart} alt="Green heart" className="w-6 h-6 object-contain" />
+                Join Our Community
               </Button>
-              <Button variant="warm" size="xl">
-                📖 Share Your Story
+              <Button variant="warm" size="xl" className="flex items-center gap-2">
+                <Quote className="w-6 h-6" />
+                Share Your Story
               </Button>
             </div>
             
